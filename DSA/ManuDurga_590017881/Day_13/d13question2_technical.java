@@ -2,7 +2,6 @@ package Day_13;
 import java.util.*;
 
 public class d13question2_technical {
-    // Static helper method to count distinct subsequences
     private static int countDistinctSubseq(String s) {
         int n = s.length();
         int[] dp = new int[n + 1];

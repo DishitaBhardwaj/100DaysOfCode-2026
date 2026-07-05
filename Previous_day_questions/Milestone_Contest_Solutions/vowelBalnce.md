@@ -1,21 +1,6 @@
 # Vowel Balance
 
-## Problem Summary
 
-Given a string `s`, find the length of the **longest "balanced" substring**, where a substring is considered balanced if - treating each vowel (`a, e, i, o, u`, case-insensitive) as weight **+1** and each consonant as weight **−2** - the weighted sum of the substring is **≤ 0**. Also report **how many** substrings of that maximum length achieve balance. If no non-trivial balanced substring exists, output `No` / `solution` on two lines.
-
-**Core idea (prefix sum + Fenwick/BIT "min index" trick):**
-1. Build a prefix-weight array `P`, where `P[0] = 0` and `P[i+1] = P[i] + weight(s[i])`.
-2. A substring `s[k..j-1]` is balanced exactly when `P[j] - P[k] <= 0`, i.e. `P[k] >= P[j]`.
-3. So for each ending index `j`, we need the **smallest `k` with `P[k] >= P[j]`** to maximize the substring length `j - k`.
-4. Since `P[k]` values are bounded (`-2n <= P[k] <= n`), they can be mapped directly to array indices (no sorting needed) and stored in a **Fenwick tree indexed by (a transform of) value**, where each position keeps the **minimum index `k`** seen so far with that value (or larger, via the transform `idx = hi_val - v + 1`, which reverses order so a Fenwick prefix-min naturally answers "smallest k with P[k] >= v").
-5. Process `j` from `0` to `n`: first *query* the tree for the best (smallest) index satisfying `P[k] >= P[j]` (skip `j == 0` since there's no earlier prefix), then *update* the tree at `P[j]`'s position with index `j`.
-6. Track the best (maximum) length found and how many times that maximum length is achieved.
-
-**Time complexity:** O(n log n) — one Fenwick query and one update per position.
-**Space complexity:** O(n) — for the prefix array and the Fenwick tree (range is `O(n)` since weights are bounded by `−2n` to `n`).
-
----
 
 ## Python
 
@@ -451,14 +436,3 @@ public class Solution {
 ```
 
 ---
-
-## Notes on Edge Cases Handled
-
-| Case | Handling |
-|---|---|
-| No balanced substring exists | `best_len` stays `0`; output is `No` / `solution` on two lines |
-| Case-insensitive vowels | All languages lowercase each character before checking vowel membership |
-| Weight bounds | `P` values are bounded in `[-2n, n]`, so the Fenwick tree can be indexed directly by a linear transform of the value — no coordinate compression via sorting/binary search is needed |
-| Multiple substrings tying for the max length | `best_count` is incremented (not reset) whenever a new match ties the current `best_len` |
-| Overflow of prefix sums | `P` is stored as `long long` / `long` (C, C++, Java) since consonant weight `-2` can push values to `±2n`, which may exceed `int` range for very large `n` |
-| Empty or all-consonant / all-vowel strings | Still processed correctly through the same prefix-sum + Fenwick logic; no special-casing required |

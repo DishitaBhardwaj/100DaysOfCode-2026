@@ -1,19 +1,5 @@
 # Find Lost Tickets
 
-## Problem Summary
-
-Given an integer `n` (tickets numbered `1` to `n`) and an array of tickets that are actually present, find all ticket numbers in the range `[1, n]` that are **missing**.
-
-**Approach used in all four solutions:**
-1. Create a boolean "present" array of size `n + 1` (index `0` unused), initialized to `false`.
-2. Mark every ticket number that appears in the input array as `present[ticket] = true`.
-3. Scan `1` through `n`; any index still marked `false` is a lost ticket.
-4. Collect and return those missing numbers in ascending order.
-
-**Time complexity:** O(n + m), where `m` is the number of given tickets.
-**Space complexity:** O(n) for the presence array.
-
----
 
 ## Python
 
@@ -441,12 +427,3 @@ public class Solution {
 
 ---
 
-## Notes on Edge Cases Handled
-
-| Case | Handling |
-|---|---|
-| No tickets are lost | `present[]` fully `true`, result array/list is empty, output is an empty line |
-| Duplicate ticket numbers in input | Duplicates simply set the same `present[i]` flag twice — no effect on correctness |
-| All tickets lost (empty input array) | Every index `1..n` gets added to the result |
-| Trailing whitespace in input line | Explicitly trimmed/stripped before tokenizing (`rtrim`, `.strip()`, `.trim()`, regex `\s+$`) |
-| Output formatting | Missing numbers are space-separated in ascending order, matching the required output format |

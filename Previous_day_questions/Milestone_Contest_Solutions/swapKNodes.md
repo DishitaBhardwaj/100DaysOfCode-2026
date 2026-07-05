@@ -1,21 +1,5 @@
 # Swap Nodes in Pairs at Distance K
 
-## Problem Summary
-
-Given the head of a singly linked list and an integer `k`, swap the **data** of the `k`-th node from the beginning with the `k`-th node from the end (1-indexed). If `k` is out of range, or the two positions are the same node, the list is returned unchanged.
-
-**Approach used in all four solutions:**
-1. Traverse the list once to find its length `n`.
-2. If `k > n`, return the list unchanged (invalid `k`).
-3. If `2k - 1 == n`, the two target nodes are identical — nothing to swap.
-4. Walk `k - 1` steps from `head` to find the `k`-th node from the start.
-5. Walk `n - k` steps from `head` to find the `k`-th node from the end.
-6. Swap the `data` fields of the two nodes (not the nodes themselves — this avoids re-linking pointers).
-
-**Time complexity:** O(n) — one pass to find length, plus two partial passes bounded by `n`.
-**Space complexity:** O(1) — no extra data structures used.
-
----
 
 ## Python
 
@@ -646,12 +630,3 @@ public class Solution {
 ```
 
 ---
-
-## Notes on Edge Cases Handled
-
-| Case | Handling |
-|---|---|
-| `k` greater than list length | Returns list unchanged |
-| Swap positions coincide (`2k - 1 == n`) | Returns list unchanged (no-op swap) |
-| Single-node list | Length check naturally prevents invalid access |
-| Swapping data vs. nodes | Only `data` fields are swapped — pointers/links stay intact, so no special-casing is needed for adjacent or overlapping nodes |

@@ -51,4 +51,8 @@ incidents = [34, 7, 23, 32, 5, 62, 15]
 merge_sort(incidents, 0, len(incidents) - 1)
 print("Sorted Reports:", incidents)
 
+<<<<<<< HEAD
 print("Record Found At:", binary_search(incidents, 23))
+=======
+print("Record Found At:", binary_search(incidents, 23))
+>>>>>>> 8aeae6803efbccbf4cce699e37f35b58671a84af

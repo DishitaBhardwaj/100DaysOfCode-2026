@@ -1,0 +1,23 @@
+class Solution {
+public:
+    string winner(vector<string>& goals) {
+
+        unordered_map<string, int> freq;
+
+        string winner = "";
+        int maxGoals = 0;
+
+        for (string team : goals) {
+
+            freq[team]++;
+
+            if (freq[team] > maxGoals) {
+
+                maxGoals = freq[team];
+                winner = team;
+            }
+        }
+
+        return winner;
+    }
+};

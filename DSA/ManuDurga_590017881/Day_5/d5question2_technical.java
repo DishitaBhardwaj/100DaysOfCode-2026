@@ -29,7 +29,7 @@ public class d5question2_technical {
         for (int i = 0; i < n; i++) {
             b[i] = sc.nextInt();     
         }
-
+sc.close();
         System.out.println(areEqual(a, b));
     }
 }

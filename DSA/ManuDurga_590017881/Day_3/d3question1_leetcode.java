@@ -1,6 +1,5 @@
 package Day_3;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -11,7 +10,7 @@ class d3question1_leetcode{
         int[] digits = new int[n];
         for (int i = 0; i < n; i++) {
             digits[i] = sc.nextInt();}     //elements of that array
-        
+        sc.close();
         for (int i = digits.length - 1; i >= 0; i--) {
             if (digits[i] != 9) {
                 digits[i] = digits[i]+1;
@@ -21,7 +20,6 @@ class d3question1_leetcode{
             else{
             digits[i] = 0;}
         }
-        sc.close();
 
         int[] copy = new int[digits.length + 1];
         copy[0] = 1;

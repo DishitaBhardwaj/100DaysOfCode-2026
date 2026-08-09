@@ -81,4 +81,5 @@ public class d15question1_leetcode {
             merged = merged.next;
         }
         System.out.println();
+        sc.close();
     }}

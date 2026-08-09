@@ -5,7 +5,7 @@
 
 ## What is this challenge?
 
-The 100 Days of Code Challenge is a structured, daily coding programme running from **15th June to 22nd September 2026**. Every participant commits to solving two coding problems each day — one on LeetCode, one on the ACM platform — and submitting solutions to this GitHub repository.
+The 100 Days of Code Challenge is a structured, daily coding programme running from **15th June to 22nd September 2026**. Every participant commits to solving two coding problems each day. One on LeetCode, the other one on the ACM platform and submitting the solutions to this GitHub repository.
 
 The goal is straightforward: build consistency, sharpen problem-solving, and develop the discipline of writing clean code every single day.
 

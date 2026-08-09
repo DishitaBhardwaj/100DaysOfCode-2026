@@ -1,6 +1,5 @@
 package Day_3;
 
-import java.lang.reflect.Array;
 import java.util.*;
 class d3question2_techical{
     public static void main(String[] args){

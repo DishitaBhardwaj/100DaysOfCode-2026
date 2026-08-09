@@ -22,6 +22,7 @@ public class d5question1_leetcode {
         for (int i = 0; i < n; i++) {
             Arr[i] = sc.nextInt();     // elements of the array
         }
+        sc.close();
 
         d5question1_leetcode obj = new d5question1_leetcode();
         System.out.println(obj.canJump(Arr));

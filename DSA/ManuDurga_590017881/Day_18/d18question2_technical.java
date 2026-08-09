@@ -67,7 +67,9 @@ public class d18question2_technical {
         if (s == 0) 
         {
             System.out.println("List is empty");
+            sc.close();
             return;
+            
         }
 
         System.out.print("Enter elements: ");

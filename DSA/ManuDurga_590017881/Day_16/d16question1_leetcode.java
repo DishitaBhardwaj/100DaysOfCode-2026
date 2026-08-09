@@ -62,4 +62,5 @@ public class d16question1_leetcode {
             split = split.next;
         }
         System.out.println();
+        sc.close();
     }}

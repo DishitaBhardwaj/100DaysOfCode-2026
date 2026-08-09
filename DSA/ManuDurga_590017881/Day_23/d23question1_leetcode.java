@@ -4,7 +4,6 @@ import java.util.*;
 
 public class d23question1_leetcode {
     
-    public static class Solution {
     public static int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g);
         Arrays.sort(s);  
@@ -13,7 +12,6 @@ public class d23question1_leetcode {
         for(int i =g.length-1; i>=0;i--){if(slen>-1){if(g[i]<=s[slen]){satisfiedChildren++;slen--;}}}
         return satisfiedChildren;
     }
-}
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -31,8 +29,7 @@ public class d23question1_leetcode {
         for (int i = 0; i < n; i++) {
             j[i] = sc.nextInt();
         }
-        Solution sol = new Solution();
-        int ans = sol.findContentChildren(g,j);
+        int ans = findContentChildren(g,j);
         System.out.print(ans);
         sc.close();
     }

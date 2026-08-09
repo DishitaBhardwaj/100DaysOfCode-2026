@@ -6,6 +6,7 @@ public class d9question1_leetcode {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();          // size of the input array
+        sc.close();
         int sLength = s.length();
         int wlen = 0;
         for(int i = 0; i<sLength;i++){

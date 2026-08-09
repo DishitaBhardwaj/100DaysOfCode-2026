@@ -16,4 +16,5 @@ public class d10question2_technical {
                 count++;}}
         if(count%2==0){System.out.println("CHAT WITH HER! ");}
         else{System.out.println("IGNORE HIM!");}
-            }}
+                    sc.close();
+}}

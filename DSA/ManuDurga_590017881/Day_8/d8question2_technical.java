@@ -8,5 +8,6 @@ public class d8question2_technical {
         String s = sc.nextLine();          // size of the input array
         s = new StringBuilder(s).reverse().toString();
         System.out.println(s);
+        sc.close();
     }
 }

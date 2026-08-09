@@ -26,4 +26,6 @@ public class d11question1_leetcode {
         String s = sc.nextLine(); 
         if(Arrays.toString(commonArray(s)).equals(Arrays.toString(commonArray(S)))){System.out.println("True");}
         else{System.out.println("False");}
+                sc.close();
+
     }}

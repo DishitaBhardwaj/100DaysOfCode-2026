@@ -2,7 +2,6 @@ package Day_6;
 
 import java.util.Scanner;
 
-import Day_5.d5question1_leetcode;
 
 public class d6question1_leetcode {
     public int rob(int[] nums) {
@@ -35,7 +34,7 @@ public class d6question1_leetcode {
         for (int i = 0; i < n; i++) {
             Arr[i] = sc.nextInt();     // elements of the array
         }
-
+sc.close();
         d6question1_leetcode obj = new d6question1_leetcode();
         System.out.println(obj.rob(Arr));
     }

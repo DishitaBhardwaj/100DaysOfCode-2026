@@ -13,5 +13,6 @@ public class d8question1_leetcode {
         // System.out.println(s);
         if(reverse.equals(s)){System.out.println(true);}else{
         System.out.println(false);}
+        sc.close();
     }
 }

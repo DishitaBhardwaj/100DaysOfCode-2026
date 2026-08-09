@@ -13,5 +13,7 @@ public class d12question2_technical {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println(commonArray(sc.nextLine()));
+                sc.close();
+
     }
 }

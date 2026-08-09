@@ -5,7 +5,7 @@ import java.util.*;
 public class d13question1_leetcode {
     public static String mostCommonWord(String paragraph, String[] banned) {
         String bigWord = "abc";
-        int bigI=0;
+        // int bigI=0;
         int highWordCount = 0;
         paragraph = paragraph.replaceAll("[.,]"," ");
         paragraph = paragraph.replaceAll("[^A-Za-z0-9- ]", "");
@@ -31,7 +31,7 @@ public class d13question1_leetcode {
 
     if (wordCount > highWordCount) {
         bigWord = cleanWords[i];
-        bigI = i;
+        // bigI = i;
         highWordCount = wordCount;
     }
 }return bigWord;
@@ -49,4 +49,6 @@ public class d13question1_leetcode {
         System.out.println("paragraph");
         String para = sc.nextLine();
         System.out.println(mostCommonWord(para,Arr));
+                sc.close();
+
     }}

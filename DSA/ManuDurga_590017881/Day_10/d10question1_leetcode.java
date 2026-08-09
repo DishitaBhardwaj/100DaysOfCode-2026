@@ -13,5 +13,5 @@ public class d10question1_leetcode {
         System.out.println("New Array");
         String s= sc.nextLine();          //needle input
         System.out.println(strStr(S,s));
-        
+        sc.close();
     }}

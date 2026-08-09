@@ -32,4 +32,5 @@ package Day_12;
         int[] c = new int[2];
         c[1] = Lines(widths, s);
         c[0] = linecount;
-    System.out.println(Arrays.toString(c));    }}
+    System.out.println(Arrays.toString(c));            sc.close();
+}}

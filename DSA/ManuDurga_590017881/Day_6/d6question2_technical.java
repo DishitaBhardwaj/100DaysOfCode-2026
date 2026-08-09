@@ -43,6 +43,7 @@ public class d6question2_technical {
         for (int i = 0; i < m; i++) {
             b[i] = sc.nextInt();     // elements of the array
         }
+        sc.close();
 
         d6question2_technical obj = new d6question2_technical();
         System.out.println(Arrays.toString(obj.union(a,b)));

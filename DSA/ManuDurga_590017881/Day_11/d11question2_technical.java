@@ -10,4 +10,6 @@ public class d11question2_technical {
         s= s.replaceAll("a","").replaceAll("u","").replaceAll("o","").replaceAll("i","").replaceAll("e","");
         s=s.replaceAll(".", ".$0");
         System.out.println(s);
+                sc.close();
+
     }}

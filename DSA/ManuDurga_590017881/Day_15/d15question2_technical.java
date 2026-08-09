@@ -14,6 +14,6 @@ public class d15question2_technical {
         Collections.reverse(ll);
 
         System.out.println("Reversed list: " + ll);
-
+sc.close();
      }
     }

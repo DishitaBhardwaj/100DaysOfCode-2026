@@ -2,7 +2,7 @@ package Day_2;
 import java.util.Scanner;
 public class d2questiond1_technical {
     public static void main(String[] args){
-        int totalNumberSum=0;
+        // int totalNumberSum=0;
         int a=0;
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();          //this is the size of the input array

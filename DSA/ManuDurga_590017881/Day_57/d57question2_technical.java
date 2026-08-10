@@ -36,7 +36,5 @@ public static void main(String[] args) {
         for(int i=0;i<n2;i++){
             System.out.print(": ");
             Arr2[i]=sc.nextInt();}
-        System.out.print("Enter k: ");
-        int k = sc.nextInt();
-        System.out.println(checkMirror(Arr1,Arr2,k));
+        System.out.println(checkMirror(Arr1,Arr2));
         sc.close();}}

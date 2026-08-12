@@ -1,4 +1,4 @@
-package Day_57;
+package Day_58;
 
 import java.util.*;
 
@@ -16,33 +16,37 @@ public class TreeNode {
 }
 
 
-public class d57question1_leetcode {
-    public static int sumOfLeftLeaves(TreeNode root) {
+public class d58question1_leetcode {
+     public int countNodes(TreeNode root) {
         if (root == null) {
             return 0;
         }
         
-        int total = 0;
-        Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
+        int leftHeight = getLeftHeight(root);
+
+        int rightHeight = getRightHeight(root);
         
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            
-            if (node.left != null) {
-                if (node.left.left == null && node.left.right == null) {
-                    total += node.left.val;
-                }
-                stack.push(node.left);
-            }
-            
-            if (node.right != null) {
-                stack.push(node.right);
-            }
+        if (leftHeight == rightHeight) {
+            return (1 << leftHeight) - 1; 
         }
-        
-        return total;
+        return 1 + countNodes(root.left) + countNodes(root.right);
     }
+    
+    private int getLeftHeight(TreeNode node) {
+        int height = 0;
+        while (node != null) { 
+            height++; 
+            node = node.left; }
+        return height;
+    }
+    private int getRightHeight(TreeNode node) {
+        int height = 0;
+        while (node != null) { 
+            height++; 
+            node = node.right; 
+        }
+        return height;}}
+
     // public static void main(String[] args) {
     //    Scanner sc = new Scanner(System.in);
     //     System.out.print("Enter Size of Array: ");

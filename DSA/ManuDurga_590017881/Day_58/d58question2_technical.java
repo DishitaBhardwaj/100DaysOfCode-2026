@@ -36,7 +36,7 @@ public class d58question2_technical {
             curr = parent.get(curr);
         }
 
-        return -1;
+        return -1;}}
     
 // public static void main(String[] args) {
 //         Scanner sc = new Scanner(System.in);

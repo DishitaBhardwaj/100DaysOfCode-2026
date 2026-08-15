@@ -1,8 +1,8 @@
-package Day_61;
+package Day_62;
 
 import java.util.*;
 
-public class d61question2_technical {
+public class d62question2_technical {
    static class Node {
         int val;
         Node left, right;
